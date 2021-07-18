@@ -19,6 +19,20 @@ type User {
     savedBooks: [Book]
 }
 
+type Query {
+    // for getSingleUser by id or username
+    user(_id: ID!): User
+    user(username: String!): User
+}
+
+type Mutation {
+    // for login, createUser, saveBook, deleteBook
+    login(username: String!, email: String!, password: String!): Auth
+    createUser(username: String!, email: String!, password: String!): Auth
+    saveBook()
+    deleteBook()
+    
+}
 `;
 
 // export the typeDefs
