@@ -63,6 +63,8 @@ const SearchBooks = () => {
 
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
+    console.log(bookToSave);
+    console.log(token);
 
     if (!token) {
       return false;
@@ -78,7 +80,6 @@ const SearchBooks = () => {
       console.error(err);
     }
   };
-
 
   return (
     <>
